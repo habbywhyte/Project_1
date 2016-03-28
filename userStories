@@ -1,0 +1,16 @@
+Bronze Level
+When the user opens the page, the game with the grid of cards should be displayed.
+When the user opens the page, the instructions should be displayed.
+When the user opens the page, all the cards should be face down
+The user should be able push a start button to begin the game.
+When the user pushes the start button it should also initiate the timer, to test speed
+The user should also click two cards to get a match of like images
+If the user clicks on a match, the pair cards should remain revealed
+If the user does not click on a match, the cards should turn back over
+The user should see a counter- that counts the amount of moves played (1 move = 2 clicked cards)
+
+
+Gold Level
+When the user opens the page, a box with a start button and instructions included should be displayed in front of the grid
+When the user finishes the game, a box should appear displaying the time played and amount of moves
+When the user finishes the game, the values of the timer and moves will be compared to previous game(s)  
