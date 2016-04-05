@@ -8,12 +8,15 @@
 //
 // flipping cards ...
 
+// I like that you're using an array here!
 var language = ["java", "perl", "js", "rails", "ruby", "python", "jquery", "php",
              "java", "perl", "js", "rails", "ruby", "python", "jquery", "php"];
             console.log(language)
 
 var circles = document.querySelectorAll(".circle");
 console.log(circles)
+// suggest removing console log statements once they've helped you verify that
+// something's working or fix something that's broken
 var startButton = document.querySelector("#start");
 var clicks = 0;
 var clickCircle1;
@@ -26,6 +29,8 @@ var match = '';
 
 
 for (var i = 0; i < circles.length; i++) {
+  // when looping over an array, I'd suggest using a variable like
+  // currentCircle instead of tempCircle, for clarity.
   tempCircle = circles[i];
 
   tempCircle.setAttribute("data-language",language[i]);
@@ -45,6 +50,11 @@ function showCard() {
     // compare cards
     // change clickCircles to (null or undefined)
 
+  // we talked about this in person, but the approach below of setting
+  // clickCircle1 and clickCircle two here is very confusing (even though it
+  // works). Improving this code is all about thinking how to model the problem.
+  // most solutions I've found involve checking the click counter and if it's
+  // odd setting clickCircle1, even, clickCircle2
   clickCircle1 = this;
   compareCard();  //
   clickCircle2 = this;
@@ -53,6 +63,8 @@ function showCard() {
 
 function compareCard () {
   clicks++
+// you've got lots of 'dead' code here that' you've commented out! recommend
+// removing it or moving it to a separate JS file.
 
 // if (clicks == 2) {return ;}
   if (clicks % 2 == 0){
