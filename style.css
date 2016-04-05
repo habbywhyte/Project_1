@@ -1,12 +1,15 @@
 html {
   height: 100%;
 }
+
+/* recommend putting a blank line between each rule (like where this comment is) */
 body {
   background: url("purpleGradient_background.jpg") no-repeat fixed;
   padding: 25px 15px;
   height: 100%;
   margin: 0;
   padding: 0;
+  /* this padding is overwriting the one 4 lines above... a bit confusing! */
 }
 h1 {
   text-align: center;
@@ -71,9 +74,11 @@ h1 {
     line-height: 0;
     visibility: hidden;
   }
+/* watch out for indentation here! */
   .side {
     display: inline-block;
     clear: both;
+    /* lots of repeated box-sizing: border-box... suggest putting it on every element */
     box-sizing: border-box;
     width: 250px;
     height: 125px;
@@ -96,9 +101,41 @@ h1 {
     font-weight: bold;
     position:relative;
     top: 50%;
+    /* what is this transform for? */
     transform: translateY(-50%);
   }
+  /* suggest trying to keep your rules ordered in a logical manner so they're
+      easier to read and update. a great tool for this is csscomb.com check out
+      the same rule you have above after it's be "combed":
 
+  button.bttn {
+    font-size: 24px;
+    font-weight: bold;
+
+    position: relative;
+    top: 50%;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+
+    transform: translateY(-50%);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: #33334d;
+  }
+*/
+
+
+/*
+same as in your index, I suggest moving un-used CSS to a separate file so your
+main code is smaller an neater
+*/
   /*.row, .col {
     box-sizing: border-box;
     outline: #f0f0f5 solid .5px;
